@@ -10,13 +10,11 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
-
     @Singleton
     @Provides
     fun providerRetrofit(): Retrofit {
         return Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
     }
-
     @Singleton
     @Provides
     fun provideFakeApi(retrofit: Retrofit) :FakerAPI{
