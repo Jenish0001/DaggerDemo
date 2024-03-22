@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("dagger.hilt.android.plugin")
     kotlin("kapt")
 }
 
@@ -44,9 +43,12 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    val hiltVersion = "2.44"
+   /* val hiltVersion = "2.44"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")*/
+
+    implementation("com.google.dagger:dagger:2.48")
+    kapt("com.google.dagger:dagger-compiler:2.48")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
 
